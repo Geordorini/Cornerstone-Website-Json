@@ -4,20 +4,7 @@
 </head>
 <body>
      <h1>Cornerstone ESP Controller</h1>
-    <p>Current Settings:</p>
-    
-    <div id="data"></div>
-
-    <script>
-        // Load and display the JSON data on the page
-        fetch('data.json')
-            .then(r => r.json())
-            .then(data => {
-                document.getElementById('data').innerHTML = `
-                    <p>LED: ${data.led}</p>
-                    <p>Interval: ${data.interval}</p>
-                    <p>Message: ${data.message}</p>
-                `;
-            });
+    This website hosts some data that for an ESp as a proof of concept for reading data online. Currently this website is using a gitub pdi so its a static website, so this is only a temporary solution.
 </body>
-</html>
+
+
