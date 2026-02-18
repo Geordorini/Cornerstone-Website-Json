@@ -1,5 +1,25 @@
 {
-  "led": "on",
-  "interval": 5000,
-  "message": "Hello ESP!"
+    "medicines": {
+        "aspirin": {
+            "dispenser": "X",
+            "dosage": "500mg",
+            "frequency": "twice daily",
+            "instructions": "Take with food and water",
+            "warnings": "Do not take on empty stomach"
+        },
+        "ibuprofen": {
+            "dispenser": "Y",
+            "dosage": "400mg",
+            "frequency": "three times daily",
+            "instructions": "Take with food",
+            "warnings": "Do not exceed 1200mg per day"
+        },
+        "paracetamol": {
+            "dispenser": "Z",
+            "dosage": "1000mg",
+            "frequency": "four times daily",
+            "instructions": "Take with water",
+            "warnings": "Do not exceed 4000mg per day"
+        }
+    }
 }

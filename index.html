@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title> Cornerstone Pill Dispenser Website</title>
+</head>
+<body>
+     <h1>Cornerstone ESP Controller</h1>
+    <p>Current Settings:</p>
+    
+    <div id="data"></div>
+
+    <script>
+        // Load and display the JSON data on the page
+        fetch('data.json')
+            .then(r => r.json())
+            .then(data => {
+                document.getElementById('data').innerHTML = `
+                    <p>LED: ${data.led}</p>
+                    <p>Interval: ${data.interval}</p>
+                    <p>Message: ${data.message}</p>
+                `;
+            });
+</body>
+</html>

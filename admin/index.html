@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin - Cornerstone</title>
+</head>
+<body>
+
+    <!-- Login Screen -->
+    <div id="login">
+        <h2>Login</h2>
+        <input type="password" id="password" placeholder="Enter password"/>
+        <button onclick="login()">Enter</button>
+    </div>
+
+    <!-- Hidden admin content -->
+    <div id="admin" style="display:none;">
+        <h1>ESP Control Panel</h1>
+        <p>LED: <span id="led"></span></p>
+        <p>Interval: <span id="interval"></span></p>
+        <p>Message: <span id="message"></span></p>
+    </div>
+
+    <script>
+        function login() {
+            const pass = document.getElementById('password').value;
+            if (pass === "yourpassword") {
+                document.getElementById('login').style.display = 'none';
+                document.getElementById('admin').style.display = 'block';
+                loadData();
+            } else {
+                alert("Wrong password!");
+            }
+        }
+
+        function loadData() {
+            fetch('../data.json')
+                .then(r => r.json())
+                .then(data => {
+                    document.getElementById('led').textContent = data.led;
+                    document.getElementById('interval').textContent = data.interval;
+                    document.getElementById('message').textContent = data.message;
+                });
+        }
+    </script>
+</body>
+</html>
