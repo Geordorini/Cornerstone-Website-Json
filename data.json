@@ -1,0 +1,5 @@
+{
+  "led": "on",
+  "interval": 5000,
+  "message": "Hello ESP!"
+}
