@@ -14,10 +14,8 @@
 
     <!-- Hidden admin content -->
     <div id="admin" style="display:none;">
-        <h1>ESP Control Panel</h1>
-        <p>LED: <span id="led"></span></p>
-        <p>Interval: <span id="interval"></span></p>
-        <p>Message: <span id="message"></span></p>
+        <h1>Prescription Database</h1>
+        <pre id="rawdata"></pre>
     </div>
 
     <script>
@@ -36,9 +34,7 @@
             fetch('../data.json')
                 .then(r => r.json())
                 .then(data => {
-                    document.getElementById('led').textContent = data.led;
-                    document.getElementById('interval').textContent = data.interval;
-                    document.getElementById('message').textContent = data.message;
+                    document.getElementById('rawdata').textContent = JSON.stringify(data, null, 2);
                 });
         }
     </script>
